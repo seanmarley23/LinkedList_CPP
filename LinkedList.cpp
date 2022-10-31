@@ -79,6 +79,25 @@ void List::deleteNodeWithValue(int value){
     }
 };
 
+void List::deleteNodeAtPosition(int p){
+    if(head == NULL){
+        cout << "List is empty. Nothing to delete." << endl;
+    }
+
+    current = head;
+    temp = head;
+    nodePtr delPtr = NULL;
+    int index = 1;
+
+    if(p == index){
+        temp = NULL;
+        head = current->next;
+        delPtr = current;
+        delete delPtr;
+    }
+
+}
+
 void List::print(){
     
     if(head == NULL){
