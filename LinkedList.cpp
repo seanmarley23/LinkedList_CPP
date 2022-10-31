@@ -95,6 +95,21 @@ void List::deleteNodeAtPosition(int p){
         delPtr = current;
         delete delPtr;
     }
+    else{
+        while(index != p){
+            temp = current;
+            current = current->next;
+            index++;
+        }
+        if(current == NULL){
+            cout << "Position not available" << endl;
+        }
+        else{
+            delPtr = current;
+            temp->next = current->next;
+            delete delPtr;
+        }
+    }
 
 }
 

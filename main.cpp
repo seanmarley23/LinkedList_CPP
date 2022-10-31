@@ -11,8 +11,14 @@ int main(){
     testing.addNode(4);
     testing.print(); //1,2,3,4
     cout << endl;
+    testing.deleteNodeAtPosition(2);
+    testing.print(); //1,3,4
     testing.deleteNodeAtPosition(1);
-    testing.print(); //2,3,4
+    cout << endl;
+    testing.print(); //3,4
+    
+
+
 
     return 0;
 };
