@@ -10,10 +10,11 @@ int main(){
     testing.addNode(3);
     testing.addNode(4);
     testing.print(); //1,2,3,4
-    testing.deleteNodeWithValue(1);
-    testing.print(); //2,3,4
-    testing.deleteNodeWithValue(3);
-    testing.print(); //2,4
-
+    cout << endl;
+    testing.addNodeAtPosition(500,1);
+    testing.print();//500,1,2,3,4
+    cout << endl;
+    testing.addNodeAtPosition(800,3);
+    testing.print();//500,1,800,2,3,4
     return 0;
 };

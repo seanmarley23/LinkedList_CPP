@@ -28,6 +28,27 @@ void List::addNode(int data){
     }
 };
 
+void List::addNodeAtPosition(int data, int p){
+    nodePtr this_node = new node;
+    this_node->data = data;
+    int index = 1;
+    current = head;
+    
+    if(p == 1){
+        head = this_node;
+        this_node->next = current;
+    }
+    else{
+        while(index != p){
+            temp = current;
+            current = current->next;
+            index++;
+        }
+        temp->next = this_node;
+        this_node->next = current;
+    }
+};
+
 void List::deleteNodeWithValue(int value){
     if(head == NULL){
         cout << "List is empty. Nothing to delete." << endl;
